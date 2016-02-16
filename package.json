@@ -21,7 +21,7 @@
     "build": "node build.js",
     "document": "documentjs"
   },
-  "main": "src/donejs-number-input",
+  "main": "donejs-number-input/donejs-number-input",
   "files": [
     "src"
   ],
