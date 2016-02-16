@@ -1,0 +1,54 @@
+{
+  "name": "donejs-number-input",
+  "version": "0.0.0",
+  "description": "A number input field for DoneJS using Bootstrap",
+  "homepage": "http://donejs.com",
+  "author": {
+    "name": "Bitovi",
+    "email": "contact@bitovi.com",
+    "url": "http://bitovi.com"
+  },
+  "scripts": {
+    "preversion": "npm test && npm run build",
+    "version": "git commit -am \"Update dist for release\" && git checkout -b release && git add -f dist/",
+    "postversion": "git push --tags && git checkout master && git branch -D release && git push",
+    "testee": "testee src/test/test.html --browsers firefox",
+    "test": "npm run jshint && npm run testee",
+    "jshint": "jshint src/. --config",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "build": "node build.js",
+    "document": "documentjs"
+  },
+  "main": "src/donejs-number-input",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "canjs",
+    "donejs"
+  ],
+  "system": {
+    "directories": {
+      "lib": "src"
+    },
+    "npmIgnore": [
+      "documentjs",
+      "testee"
+    ],
+    "npmAlgorithm": "flat"
+  },
+  "dependencies": {
+    "can": "^2.3.0",
+    "jquery": "2.1.4"
+  },
+  "devDependencies": {
+    "documentjs": "^0.4.1",
+    "jshint": "^2.9.1",
+    "steal": "^0.14.0-pre.8",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.14.0-pre.1",
+    "testee": "^0.2.4"
+  }
+}
