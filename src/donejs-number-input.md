@@ -1,5 +1,11 @@
-@page donejs-number-input
+@parent donejs-number-input
+@module {can.Component} donejs-number-input <donejs-number-input>
 
-# donejs-number-input
+A short description of the donejs-number-input component
 
-A number input field for DoneJS using Bootstrap
+@signature `<donejs-number-input>`
+
+@body
+
+## Use
+
