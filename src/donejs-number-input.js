@@ -1,42 +1,39 @@
 import Component from 'can-component';
-import Map from 'can-map';
-import 'can-map-define';
+import DefineMap from 'can-define/map/';
 import './donejs-number-input.less!';
 import template from './donejs-number-input.stache!';
 
-export const ViewModel = Map.extend({
-  define: {
-    value: {
-      value: 0,
-      type: 'number',
-      set(value) {
-        if(value > this.attr('max')) {
-          return this.attr('max');
-        }
-
-        if(value < this.attr('min')) {
-          return this.attr('min');
-        }
-
-        return value;
+export const ViewModel = DefineMap.extend({
+  value: {
+    value: 0,
+    type: 'number',
+    set(value) {
+      if(value > this.max) {
+        return this.max;
       }
-    },
-    max: {
-      value: Number.MAX_VALUE,
-      type: 'number'
-    },
-		min: {
-			value: 0,
-			type: 'number'
-		}
+
+      if(value < this.min) {
+        return this.min;
+      }
+
+      return value;
+    }
+  },
+  max: {
+    value: Number.MAX_VALUE,
+    type: 'number'
+  },
+  min: {
+    value: 0,
+    type: 'number'
   },
 
 	increment() {
-		this.attr('value', this.attr('value') + 1);
+    this.value = this.value + 1;
 	},
 
 	decrement() {
-		this.attr('value', this.attr('value') - 1);
+    this.value = this.value - 1;
 	}
 });
 
