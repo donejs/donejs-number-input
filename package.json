@@ -41,8 +41,9 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "can": "^2.3.0",
-    "jquery": "2.1.4"
+    "can": "^3.2.2",
+    "jquery": "2.1.4",
+    "steal-stache": "^3.0.4"
   },
   "devDependencies": {
     "documentjs": "^0.4.1",
