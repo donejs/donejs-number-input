@@ -62,7 +62,7 @@
     "can-stache": "^3.0.20",
     "can-view-autorender": "^3.0.4",
     "can-view-import": "^3.0.6",
-    "cssify": "^0.6.0",
+    "cssify": "^1.0.3",
     "steal-less": "^1.2.0",
     "steal-stache": "^3.0.5"
   },

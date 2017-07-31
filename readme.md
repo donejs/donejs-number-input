@@ -1,5 +1,7 @@
 # donejs-number-input
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/donejs/donejs-number-input.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/donejs/donejs-number-input.png?branch=master)](https://travis-ci.org/donejs/donejs-number-input)
 
 A number input field for DoneJS using Bootstrap
